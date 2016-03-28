@@ -11,3 +11,21 @@
   <strong>Tags:</strong>
   <%= @trade.tags %>
 </p>
+
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+  <th colspan="2"></th>
+</tr>
+ 
+<% @trade.items.each do |item| %>
+  <tr>
+    <td><%= item.title %></td>
+    <td><%= item.description %></td>
+  </tr>
+<% end %>
+
+<%= render 'item' %>
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>

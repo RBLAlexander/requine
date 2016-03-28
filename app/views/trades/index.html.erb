@@ -1,0 +1,22 @@
+<h1>Active Trades</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Tags</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @trades.each do |trade| %>
+    <tr>
+      <td><%= trade.title %></td>
+      <td><%= trade.description %></td>
+      <td><%= trade.tags %></td>
+      <td><%= link_to 'Show', trade_path(trade) %></td>
+      <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'List New Trade', new_trade_path(@trade) %>
