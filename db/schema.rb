@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328004532) do
+ActiveRecord::Schema.define(version: 20160328003204) do
 
   create_table "items", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -19,14 +19,12 @@ ActiveRecord::Schema.define(version: 20160328004532) do
     t.boolean  "accepted"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.integer  "trades_id",   limit: 4
-    t.integer  "trade_id",    limit: 4
     t.integer  "offer_id",    limit: 4
+    t.integer  "trade_id",    limit: 4
   end
 
   add_index "items", ["offer_id"], name: "index_items_on_offer_id", using: :btree
   add_index "items", ["trade_id"], name: "index_items_on_trade_id", using: :btree
-  add_index "items", ["trades_id"], name: "index_items_on_trades_id", using: :btree
 
   create_table "offers", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -36,12 +34,10 @@ ActiveRecord::Schema.define(version: 20160328004532) do
     t.string   "uri",         limit: 255
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.integer  "trades_id",   limit: 4
     t.integer  "trade_id",    limit: 4
   end
 
   add_index "offers", ["trade_id"], name: "index_offers_on_trade_id", using: :btree
-  add_index "offers", ["trades_id"], name: "index_offers_on_trades_id", using: :btree
 
   create_table "trades", force: :cascade do |t|
     t.string   "title",              limit: 255
