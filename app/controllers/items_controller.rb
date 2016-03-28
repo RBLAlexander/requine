@@ -1,12 +1,13 @@
 class ItemsController < ApplicationController
-	def new
-	end
+	#def new
+	#end
 
 	def create
-		@item = Item.new(params.require(item_params)
+		@trade = Trade.find(params[:trade_id])
+		@item = @trade.items.create(item_params)
 		@item.save
 
-		redirect_to @item
+		redirect_to trade_path(@trade)
 	end
 
 	private

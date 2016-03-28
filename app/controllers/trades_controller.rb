@@ -8,6 +8,11 @@ class TradesController < ApplicationController
 	end
 
 	def new
+		@trade = Trade.new
+	end
+
+	def edit
+	  @trade = Trade.find(params[:id])
 	end
 
 	def create
@@ -16,6 +21,16 @@ class TradesController < ApplicationController
 			redirect_to @trade
 		else
 			render 'new'
+		end
+	end
+
+	def update 
+		@trade = Trade.find(params[:id])
+
+		if @trade.update(trade_params)
+			redirect_to @trade
+		else
+			render 'edit'
 		end
 	end
 
