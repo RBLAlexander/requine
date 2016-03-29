@@ -23,16 +23,18 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+#-----------------------------------------------------------------------------------------
+#ActiveAdmin for behind-the-scenes meta administration
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+#devise for user control and auth
+gem 'devise', '~> 2.0.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+# Image upload handler
 gem 'carrierwave', '~> 0.10.0'
+# Gem for resizing images clientside
+gem 'mini_magick', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

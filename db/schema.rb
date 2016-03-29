@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328003204) do
+ActiveRecord::Schema.define(version: 20160329045516) do
 
   create_table "items", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160328003204) do
     t.datetime "updated_at",                null: false
     t.integer  "offer_id",    limit: 4
     t.integer  "trade_id",    limit: 4
+    t.string   "image",       limit: 255
   end
 
   add_index "items", ["offer_id"], name: "index_items_on_offer_id", using: :btree

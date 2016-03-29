@@ -1,3 +1,37 @@
-@include declare-font-face('Excelsior', 'Excelsior', 200);
-@include declare-font-face('Excelsior', 'Excelsior-Itallic', 400, italic);
-@include declare-font-face('Excelsior', 'Excelsior-Bold', 400, bold);
+@font-face {
+	font-family: 'excelsior';
+	src: url('excelsior.eot');
+	src: url('excelsior.eot?#iefix') format('embedded-opentype'),
+	url('excelsior.woff') format('woff'),
+	url('excelsior.ttf') format('truetype'),
+	url('excelsior.svg') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'excelsior';
+	src: url('excelsior_bold.eot');
+	src: url('excelsior_bold.eot?#iefix') format('embedded-opentype'),
+	url('excelsior_bold.woff') format('woff'),
+	url('excelsior_bold.ttf') format('truetype'),
+	url('excelsior_bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'excelsior';
+	src: url('excelsior_itallic.eot');
+	src: url('excelsior_itallic.eot?#iefix') format('embedded-opentype'),
+	url('excelsior_itallic.woff') format('woff'),
+	url('excelsior_itallic.ttf') format('truetype'),
+	url('excelsior_itallic.svg') format('svg');
+	font-weight: 200;
+	font-style: italic;
+}
+
+body {
+	font-family: excelsior;
+	font-style: italic;
+}
