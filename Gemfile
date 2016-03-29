@@ -25,11 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #-----------------------------------------------------------------------------------------
 #ActiveAdmin for behind-the-scenes meta administration
-gem 'activeadmin'
-gem 'meta_search', '>= 1.1.0.pre'
+gem 'activeadmin', github: 'activeadmin'
 
 #devise for user control and auth
-gem 'devise', '~> 2.0.0'
+gem 'devise'
 
 # Image upload handler
 gem 'carrierwave', '~> 0.10.0'
