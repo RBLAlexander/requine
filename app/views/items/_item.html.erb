@@ -1,0 +1,18 @@
+
+<table class='item_table'>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+<% @trade.items.each do |item| %>
+  <tr>
+    <td><%= image_tag item.image.thumb.url %></td>
+    <td><%= item.title %></td>
+    <td><%= item.description %></td>
+    <td><%= link_to 'Delete', [item.trade, item],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
