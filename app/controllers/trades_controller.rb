@@ -16,7 +16,8 @@ class TradesController < ApplicationController
 	end
 
 	def create
-		@trade = Trade.new(trade_params)
+		byebug
+		@trade = current_user.trades.build(trade_params)
 		if @trade.save
 			redirect_to @trade
 		else
@@ -36,6 +37,6 @@ class TradesController < ApplicationController
 
 	private
 		def trade_params
-			params.require(:trade).permit(:title, :description, :tags)
+			params.require(:trade).permit(:title, :description, :tags, :user_id)
 		end
 end

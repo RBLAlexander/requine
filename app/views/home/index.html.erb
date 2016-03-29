@@ -1,3 +1,8 @@
-<h1>Trading Website</h1>
+<div class="intro"><p class="intro_header">Hi, my name is Ralph Alexander.</p> 
+<p class="blurb">I am a general tinkerer with a lot of ongoing toolmaking, machinery restoration and automotive projects. I have become tired of not being able to relate the inventory of parts I either have or need to you, my fellow hoarders. So I have decided to make my own listings in order to do just that. <br>
+You can submit an offer on any of the parts or tools I have, or just get in contact about anything here. Just click on any of the Trades in the list below to get started. Please provide photos of the items you are offering in trade so we both know what we are dealing with.</p></div>
 <%= link_to 'List all Trades', controller: 'trades' %>
-<%= link_to 'New Trade', new_trade_path %>
+<%= if current_user.admin?
+		link_to 'New Trade', new_trade_path
+	end 
+	%>
