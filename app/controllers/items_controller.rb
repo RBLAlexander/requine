@@ -16,6 +16,17 @@ class ItemsController < ApplicationController
 		end
 	end
 
+# Editing nested items currently busted, TODO fix this
+#	def update 
+#		@trade = Trade.find(params[:id])
+#		@item = @trade.items.create(item_params)
+#		if @item.update(item_params)
+#			redirect_to @trade
+#		else
+#			render 'edit'
+#		end
+#	end
+
   def destroy
     @trade = Trade.find(params[:trade_id])
     @item = @trade.items.find(params[:id])
@@ -26,6 +37,6 @@ class ItemsController < ApplicationController
 
 	private
 		def item_params
-			params.require(:item).permit(:title, :description)
+			params.require(:item).permit(:title, :description, :image)
 		end
 end

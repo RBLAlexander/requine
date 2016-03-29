@@ -35,3 +35,51 @@ body {
 	font-family: excelsior;
 	font-style: italic;
 }
+
+.background-img{
+		position: absolute;
+		background-image: image-url('searles_valley_small.jpg');
+	  	width: 100%;
+	  	top: 0;
+	  	left: 0;
+	  	z-index: -1;
+	}
+
+main {
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 48%;
+}
+
+ul.nav li {
+  display: inline;
+}
+ul.nav li a {
+  padding: 10px 15px 10px;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+}
+.flash_notice, .flash_alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+.flash_notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.flash_alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}

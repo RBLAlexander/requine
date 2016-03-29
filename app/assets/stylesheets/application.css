@@ -1,8 +1,0 @@
-/*This has been altered to load main.scss to the utilize the normal sass @import syntax for dependencies
- *
- * 
- *= require_self
- *= require main
- */
-
-
