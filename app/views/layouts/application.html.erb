@@ -11,12 +11,11 @@
   <body>
     <header>
       <%= render 'layouts/navigation' %>
-
+      <%= image_tag("searles_valley_small.jpg", class: "background-img") %>
     </header>
     <main role="main">
       <%= render 'layouts/messages' %>
       <%= yield %>
     </main>
-    <%= image_tag("searles_valley_small.jpg", class: "background-img") %>
   </body>
 </html>

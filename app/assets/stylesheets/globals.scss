@@ -8,32 +8,40 @@
 body {
 	font-family: rockwell;
 	//font-style: italic;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
 }
 
 .background-img{
-		position: absolute;
-		background-image: image-url('searles_valley_small.jpg');
-	  	width: 100%;
-	  	top: 0;
-	  	left: 0;
-	  	z-index: -1;
-	}
+	position: static;
+	background-image: image-url('searles_valley_small.jpg');
+	width: 100%;
+	max-height: 960px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
 
 main {
-  background-color: #eee;
-  padding-bottom: 80px;
-  width: 100%;
-  margin-top: 48%;
+	background-color: white;
+  	padding-bottom: 80px;
+  	width: 100%;
+  	//margin-top: 40%;
+}
+
+.nav {
+	position: absolute;
+	top: 0;
 }
 
 ul.nav li {
-  display: inline;
+  	display: inline;
 }
 ul.nav li a {
   padding: 10px 15px 10px;
-  color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 white;
 }
 .flash_notice, .flash_alert {
   padding: 8px 35px 8px 14px;
