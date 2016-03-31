@@ -1,0 +1,12 @@
+//Bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//Global sheets
+@import "globals.scss";
+@import "normalize.scss";
+
+//View-specific styles
+@import "items.scss";
+@import "trades.scss";
+@import "offers.scss";
