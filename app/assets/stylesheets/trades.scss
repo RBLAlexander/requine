@@ -1,18 +1,10 @@
 // Place all the styles related to the trades controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.intro{
-	padding-left: 40px;
-	padding-right: 40px;
-}
 
-.intro-header {
-	padding-top: 25px;
-	padding-bottom: 20px;
-	text-align: center;
-	font-style: bold;
-}
 
-.blurb{
-	font-family: rockwell_light;
+.grid-item{
+	img{
+    	max-width: 100%;
+  	}
 }

@@ -8,7 +8,7 @@
 <div id="main_container" class='container'>
   <div class="row">  
     <% @trades.each do |trade| %>
-      <div class="col-lg-4 col-sm-6 col-xs-12 trade-grid-item">
+      <div class="col-lg-6 col-sm-6 col-xs-12 grid-item">
           <%= link_to(trade_path(trade)) do %>
             <%= if trade.items[0] && trade.items[0].image != nil
                 image_tag trade.items[0].image.medium.url

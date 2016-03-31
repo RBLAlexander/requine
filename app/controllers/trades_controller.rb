@@ -16,7 +16,6 @@ class TradesController < ApplicationController
 	end
 
 	def create
-		byebug
 		@trade = current_user.trades.build(trade_params)
 		if @trade.save
 			redirect_to @trade

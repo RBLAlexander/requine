@@ -1,19 +1,18 @@
 
-<table class='item_table'>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
- 
-<% @trade.items.each do |item| %>
-  <tr>
-    <td><%= image_tag item.image.thumb.url %></td>
-    <td><%= item.title %></td>
-    <td><%= item.description %></td>
-    <td><%= link_to 'Edit', edit_polymorphic_path([@trade, item]) %></td>
-    <td><%= link_to 'Delete', [item.trade, item],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<h3 class="intro-header intro">Items in this trade</h3>
+<div id="main_container" class='container'>
+  <div class="row"> 
+    <% @trade.items.each do |item| %>
+      <div class="col-lg-4 col-sm-6 col-xs-12 grid-item">
+        <%= if item.image != nil 
+                link_to item.image.url do 
+                  image_tag item.image.medium.url 
+                end 
+            end %>
+        <h3><%= item.title %></h3>
+        <p><%= item.description %></p>
+        </div>
+    <% end %>
+  </div>
+</div>
+

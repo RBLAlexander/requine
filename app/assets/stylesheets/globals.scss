@@ -12,6 +12,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0px;
+
 }
 
 .background-img{
@@ -29,6 +30,23 @@ main {
   	padding-bottom: 80px;
   	width: 100%;
   	//margin-top: 40%;
+
+   .intro{
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 88%;
+   }
+
+  .intro-header {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-style: bold;
+  }
+
+  .blurb{
+    font-family: rockwell_light;
+  }
 }
 
 .nav {
@@ -37,6 +55,7 @@ main {
 }
 
 ul.nav li {
+    float: left;
   	display: inline;
 }
 ul.nav li a {

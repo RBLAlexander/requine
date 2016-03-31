@@ -1,18 +1,16 @@
-<p>
-  <strong>Title:</strong>
-  <%= @trade.title %>
-</p>
+<div class="intro">
+	<h3 class="intro-header"><%= @trade.title %></h3>
  
-<p>
-  <%= @trade.description %>
-</p>
+	<p class="blurb">
+	  <%= @trade.description %>
+	</p>
+	<p class="tags">
+  		<%= @trade.tags %>
+	</p>
+</div>
 
-<p>
-  <strong>Tags:</strong>
-  <%= @trade.tags %>
-</p>
 
-<h2>Items</h2>
+
 <%= render 'items/item' %>
 
 <%= if current_user.try(:admin?)
