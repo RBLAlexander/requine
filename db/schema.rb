@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 20160329122720) do
     t.string   "tags",               limit: 255
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.integer  "user",               limit: 4
+    t.integer  "user_id",               limit: 4
   end
 
   create_table "users", force: :cascade do |t|

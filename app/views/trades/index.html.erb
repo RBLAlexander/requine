@@ -1,41 +1,27 @@
-<div class="intro"><h1 class="introheader">Hi, my name is Ralph Alexander.</h1> 
-<p class="blurb">I am a general tinkerer with a lot of ongoing toolmaking, machinery restoration and automotive projects. I have become tired of not being able to relate the inventory of parts I either have or need to you, my fellow hoarders. So I have decided to make my own listings in order to do just that. <br>
-You can submit an offer on any of the parts or tools I have, or just get in contact about anything here. Just click on any of the Trades in the list below to get started. Please provide photos of the items you are offering in trade so we both know what we are dealing with.</p></div>
+<div class="intro">
+  <h3 class="intro-header">Hi, my name is Ralph Alexander.</h3> 
+  <p class="blurb">I am a general tinkerer with a lot of ongoing toolmaking, machinery restoration and automotive projects. I have become tired of not being able to relate the inventory of parts I either have or need to you, my fellow hoarders. So I have decided to make my own listings in order to do just that. <br>
+  You can submit an offer on any of the parts or tools I have, or just get in contact about anything here. Just click on any of the Trades in the list below to get started. Please provide photos of the items you are offering in trade so we both know what we are dealing with.</p>
+</div>
 
-<h1 classs="intro-header">Things I am Looking to Trade</h1>
-<div id="trades_grid" class='grid-container'>
-  <%  byebug  %>
-  <%for trade in @trades %>
-    <div id="<% trade.id %>" class="trade">
-      <p><% trade.title %></p>
-    </div>
-  <% end %>
+<h3 class="intro-header">Things I am Looking to Trade</h3>
+<div id="main_container" class='container'>
+  <div class="row">  
+    <% @trades.each do |trade| %>
+      <div class="col-lg-4 col-sm-6 col-xs-12 trade-grid-item">
+          <%= link_to(trade_path(trade)) do %>
+            <%= if trade.items[0] && trade.items[0].image != nil
+                image_tag trade.items[0].image.medium.url
+              end %>
+            <h3><%= trade.title %></h3>
+          <% end %>
+          <p><%= trade.description %></p>
+        </div>
+    <% end %>
+  </div>
 </div>
 
 <%= if current_user.try(:admin?)
     link_to 'New Trade', new_trade_path
   end 
   %>
-
-<h1>Things I am Looking to Trade</h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Tags</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @trades.each do |trade| %>
-    <tr>
-      <td><%= trade.title %></td>
-      <td><%= trade.description %></td>
-      <td><%= trade.tags %></td>
-      <td><%= link_to 'Show', trade_path(trade) %></td>
-      <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to 'List New Trade', new_trade_path(@trade) %>

@@ -1,9 +1,20 @@
 class ItemsController < ApplicationController
-	#def new
-	#end
+		def show
+			@trade = Trade.find(params[:trade_id])
+			@item = @trade.items.find(params[:id])
+		end
+
+	def new
+	end
+	
+  def update
+     @trade = Trade.find(params[:trade_id])
+     @item = @trade.items.find(params[:id])
+  end
+  
 	def edit
 	  @trade = Trade.find(params[:trade_id])
-	  @item = @trade.item.find(params[:id])
+	  @item = @trade.items.find(params[:id])
 	end
 
 	def create
