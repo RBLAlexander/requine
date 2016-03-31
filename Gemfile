@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+#replace WEBrick
+gem 'passenger' 
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,8 +32,10 @@ gem 'activeadmin', github: 'activeadmin'
 #devise for user control and auth
 gem 'devise'
 
+gem 'mime-types-data'
+
 # Image upload handler
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Gem for resizing images clientside
 gem 'mini_magick', '~> 4.3'
 
