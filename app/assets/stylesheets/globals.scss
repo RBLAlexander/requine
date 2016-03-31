@@ -1,8 +1,26 @@
+//I do not enjoy having this mixin here, but due to the way the asset pipeline tags asset file name i have no choice
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$font-filename}.eot');
+    src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-filename}.woff') format('woff'),
+    url('#{$font-filename}.ttf') format('truetype'),
+    url('#{$font-filename}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+  }
+}
+
 @include declare-font-face("excelsior", "excelsior");
 @include declare-font-face("excelsior", "excelsior_italic", 400, italic);
 @include declare-font-face("rockwell", "excelsior_bold", bold);
 @include declare-font-face("rockwell", "rockwell");
 @include declare-font-face("rockwell_light", "rockwell_light", 200);
+
+
 
 
 body {
