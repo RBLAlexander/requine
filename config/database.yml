@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: requine_production
-  username: requine
+  username: <%= ENV['REQUINE_DATABASE_USER'] %>
   password: <%= ENV['REQUINE_DATABASE_PASSWORD'] %>
