@@ -11,5 +11,19 @@
  * file per style scope.
  *
  *= require_self
- *= require main
+ *= require_tree
  */
+
+//Bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//Global sheets
+@import "mixins.scss";
+@import "globals.scss";
+@import "normalize.scss";
+
+//View-specific styles
+@import "items.scss";
+@import "trades.scss";
+@import "offers.scss";
